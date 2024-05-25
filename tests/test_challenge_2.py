@@ -37,17 +37,20 @@ class TestBook(unittest.TestCase):
             This method tests the setters of the attribute of the class
         """
         # self.f_book = Book("Start by the WHY", "Simon Sinek", 32)
-        error_message = "The name you given are not the right type"
+        error_message = "The name you given is not the right type"
         with self.assertRaises(TypeError) as context:
-            self.f_book = Book(4, 5, s)
+           # self.f_book = Book(40, 5, 's')
+           self.f_book.name = 6
+           self.f_book.name = 6
+           self.f_book.name = 6
         self.assertEqual(str(context.exception), error_message)
 
     def test_inform(self):
         """
             This method tests the method infom() of the class Book
         """
-        result = "Book {self.f_book.name}, written by {self.f_book.author}\
-                :: COST : {self.f_book.price}"
+        result = f"Book {self.f_book.name}, written by {self.f_book.author}\
+ :: COST : {self.f_book.price}\n"
         output_obj = StringIO()
         sys.stdout = output_obj
 

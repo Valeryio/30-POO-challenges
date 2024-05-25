@@ -23,9 +23,9 @@ class Book():
                 author (string): the author of the book
                 price (int): the author of the book
         """
-        self.__name = name
-        self.__author = author
-        self.__price = price
+        self.name = name
+        self.author = author
+        self.price = price
 
     @property
     def name(self):
@@ -45,7 +45,7 @@ class Book():
     @author.setter
     def author(self, value):
         if isinstance(value, str):
-            self.__author = name
+            self.__author = value
         else:
             raise TypeError("The author you given is not the right type")
 
@@ -59,3 +59,7 @@ class Book():
             self.__price = value
         else:
             raise TypeError("The price you given is not the right type")
+
+    def inform(self):
+        print(f"Book {self.__name}, written by {self.__author} :: COST :\
+ {self.price}")
