@@ -53,4 +53,4 @@ class Biscuit:
 
     def cooked(self):
         result = f"This {self.__name} have been cooked in a shape of {self.__form}"
-        return result
+        print(result)
