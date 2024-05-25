@@ -26,14 +26,14 @@ class TestBiscuit(unittest.TestCase):
     
     def test_attributes(self):
         """
-            This method test all the attributes of the class
+            This method tests all the attributes of the class
         """
         self.assertEqual(self.chichock.name, "chichock cookie")
         self.assertEqual(self.chichock.form, "circle")
 
     def test_setters(self):
         """
-            This method test the the setters for the right, and the
+            This method tests the the setters for the right, and the
             non-authorized values
         """
         # Simple test to check if the right values have been updated
