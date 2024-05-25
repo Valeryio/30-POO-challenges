@@ -5,16 +5,15 @@
 """
 
 import unittest
-from sys
+import sys
 from io import StringIO
 from challenges.challenge_2 import Book
 
 
-class TestBook(unittes.TestCase):
+class TestBook(unittest.TestCase):
     """
         This is the class that will test the book class
     """
-    device = "$"
 
     def setUp(self):
         """
