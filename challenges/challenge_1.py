@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 
-class Biscuit
-"""
-    This is the class of a biscuit
+# This module contains only one class, that is for the biscuit
 
-    Attributes:
-        name (string): the name of the biscuit
-        form (string): the shape of the biscuit
-"""
+class Biscuit:
+    """
+        This is the class of a biscuit
+
+        Attributes:
+            name (string): the name of the biscuit
+            form (string): the shape of the biscuit
+    """
 
     def __init__(self, name, form):
         self.__name = name
