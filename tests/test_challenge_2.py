@@ -37,7 +37,7 @@ class TestBook(unittest.TestCase):
             This method tests the setters of the attribute of the class
         """
         # self.f_book = Book("Start by the WHY", "Simon Sinek", 32)
-        error_message = "The arg you given are not the right type"
+        error_message = "The name you given are not the right type"
         with self.assertRaises(TypeError) as context:
             self.f_book = Book(4, 5, s)
         self.assertEqual(str(context.exception), error_message)
