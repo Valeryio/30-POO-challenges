@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
 """
-    This module contains the class
+    This module contains the class Book
 """
+
+
