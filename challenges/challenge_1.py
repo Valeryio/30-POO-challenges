@@ -32,7 +32,7 @@ class Biscuit:
         if isinstance(value, str):
             self.__name = value
         else:
-            print("The new arg is not a string")
+            raise TypeError("The new attribute is not a string")
 
     @property
     def form(self):
@@ -49,7 +49,8 @@ class Biscuit:
         if isinstance(form, str):
             self.__form = form
         else:
-            print("The new attribute is not a string")
+            raise TypeError("The new attribute is not a string")
 
-    def cuir(self):
-        print("This", self.__name, "have been")
+    def cooked(self):
+        result = f"This {self.__name} have been cooked in a shape of {self.__form}"
+        return result
