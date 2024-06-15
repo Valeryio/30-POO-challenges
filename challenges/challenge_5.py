@@ -52,3 +52,20 @@ class Person():
             raise TypeError("The gender should be a string")
         else:
             self.__gender = gender
+
+    def introduce_yourself(self):
+        """This method allow the person to introduce himself"""
+        print(f"My name is {self.name}, I'm a self.gender of \
+self.age")
+
+    def is_adult(self):
+        """This method verifies if the person is adult or no
+
+        Returns:
+            True is adult
+            False if the person is not
+        """
+        if self.age < 18:
+            return False
+        else:
+            return True
