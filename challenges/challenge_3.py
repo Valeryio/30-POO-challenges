@@ -44,3 +44,11 @@ class Note():
             self.__student_name = ""
         else:
             self.__student_name = student_name
+
+    def success(self):
+        """This methods return an information to know if the note is 
+        successful one or not"""
+        if self.__note > 15:
+            print(f"{self.__student_name} have succeeded! Congrats!")
+        else:
+            print(f"{self.__student_name} have not succeeded! Sorry!")
