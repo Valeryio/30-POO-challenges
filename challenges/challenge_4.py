@@ -39,7 +39,7 @@ class Circle():
     def radius(self):
         """This is the getter of the attribute radius"""
         return self.__radius
-    
+
     @name.setter
     def name(self, name):
         """This is the setter of the attribute name"""
@@ -59,7 +59,7 @@ class Circle():
     def radius(self, radius):
         """This is the setter of the attribute radius"""
         self.__radius = radius
-    
+
     def perimeter(self):
         """This method returns the perimeter of the circle"""
         return self.__radius * 4

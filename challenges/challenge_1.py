@@ -52,5 +52,7 @@ class Biscuit:
             raise TypeError("The new attribute is not a string")
 
     def cooked(self):
-        result = f"This {self.__name} have been cooked in a shape of {self.__form}"
+        """This method present the cooked biscuit"""
+        result = f"This {self.__name} have been cooked in a shape "\
+                + f"of {self.__form}"
         print(result)

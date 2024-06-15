@@ -55,8 +55,8 @@ class Person():
 
     def introduce_yourself(self):
         """This method allow the person to introduce himself"""
-        print(f"My name is {self.name}, I'm a self.gender of \
-self.age")
+        print(f"My name is {self.name}, I'm a {self.gender} of " +
+               f"{self.age}")
 
     def is_adult(self):
         """This method verifies if the person is adult or no

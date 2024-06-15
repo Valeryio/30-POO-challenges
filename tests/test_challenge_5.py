@@ -35,7 +35,7 @@ integer")
 
         with self.assertRaises(TypeError) as context:
             example = Person("Kaleb", -9, "male")
-        self.assertEqual(str(context.exception), "An age cannot start below\
+        self.assertEqual(str(context.exception), "An age cannot start below \
 0")
 
         with self.assertRaises(TypeError) as context:
@@ -44,17 +44,17 @@ integer")
 string")
 
     def test_introduce_yourself(self):
-        """This method test the method introduce_yourself of the class PErson"""
-        intro = f"""My name is {self.linson.name}, I'm a {self.linson.gender}\\
-of {self.linson.age}"""
+        """This method test the method introduce_yourself of the class Person"""
+        intro = f"My name is {self.linson.name}, I'm a {self.linson.gender}" \
+                + f" of {self.linson.age}\n"
         output_obj = StringIO()
         sys.stdout = output_obj
 
         self.linson.introduce_yourself()
 
         sys.stdout = sys.__stdout__
-        self.assertEqal(output_obj.getvalue(), intro)
+        self.assertEqual(output_obj.getvalue(), intro)
 
     def test_is_adult(self):
         """This test ensure that the is_adult() method is well written"""
-        self.assertEqual(is_adult(), True)
+        self.assertEqual(self.linson.is_adult(), True)
