@@ -5,8 +5,8 @@
 """
 
 import unittest
-from challenges.challenge_2 import ...
+from challenges.challenge_ import ...
 
 
-class test_(unittes.TestCase):
+class Test(unittest.TestCase):
     pass

@@ -13,7 +13,7 @@ class Circle():
             @radius : (int), the radius of the circle
     """
 
-    def __init__(self, x, y, radius):
+    def __init__(self, name, x, y, radius):
         """Initialise the object"""
         self.name = name
         self.x = x
@@ -56,6 +56,17 @@ class Circle():
         self.__y = y
 
     @radius.setter
-    def radius(self):
+    def radius(self, radius):
         """This is the setter of the attribute radius"""
         self.__radius = radius
+    
+    def perimeter(self):
+        """This method returns the perimeter of the circle"""
+        return radius * 4
+
+    def area(self):
+        """This method returns the area of the circle"""
+        return radius ** radius
+
+    def get_properties(self):
+        pass
