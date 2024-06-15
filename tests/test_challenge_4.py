@@ -29,20 +29,20 @@ class TestCircle(unittest.TestCase):
         """This methods tests the perimeter method of the class Circle"""
         
         perimeter = 24
-        self.assertEqual(perimeter, self.simple_circle.perimeter)
+        self.assertEqual(perimeter, self.simple_circle.perimeter())
 
     def test_area(self):
         """This methods tests the area method of the class Circle"""
 
         area = 36
-        self.assertEqual(area, self.simple_circle.area)
+        self.assertEqual(area, self.simple_circle.area())
 
     def test_get_properties(self):
         """This methods tests the get_properties() method of the class
         Circle"""
 
-        result = f"{self.simple_circle.name}({self.simple_circle.x},\
-                {self.simple_circle.y})\n"
+        result = f"""{self.simple_circle.name}({self.simple_circle.x},\
+ {self.simple_circle.y})(Radius: {self.simple_circle.radius})\n"""
 
         output_obj = StringIO()
         sys.stdout = output_obj

@@ -62,11 +62,13 @@ class Circle():
     
     def perimeter(self):
         """This method returns the perimeter of the circle"""
-        return radius * 4
+        return self.__radius * 4
 
     def area(self):
         """This method returns the area of the circle"""
-        return radius ** radius
+        return self.__radius * self.__radius
 
     def get_properties(self):
-        pass
+        """This method prints the attributes of the circle"""
+        print(f"{self.__name}({self.__x}, {self.__y})(Radius: \
+{self.__radius})")
