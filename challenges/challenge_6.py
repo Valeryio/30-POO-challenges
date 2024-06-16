@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 # This is the module of the class Student
+from . import Person
 
 class Student(Person):
     """This is the class Student, a child of the class Person
@@ -11,8 +12,12 @@ class Student(Person):
     """
     def __init__(self, name, age, gender, level):
         """This is the constructor calling the parent's constructor"""
-        super.__init__(name, age, gender)
+        super().__init__(name, age, gender)
         self.level = level
+
+    def __repr__(self):
+        """This method is the repr of the child"""
+
 
     @property
     def level(self):
@@ -22,3 +27,13 @@ class Student(Person):
     def level(self, level):
         if type(level) is not str:
             raise TypeError("The level should be an integer")
+        else:
+            self.__level = level
+
+    def registered_student(self):
+        """This method prints a child"""
+
+        if students is None:
+            pass
+        else:
+
