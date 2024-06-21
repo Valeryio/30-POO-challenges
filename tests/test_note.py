@@ -7,7 +7,7 @@
 import sys
 import unittest
 from io import StringIO
-from challenges.challenge_3 import Note
+from challenges.note import Note
 
 
 class TestNote(unittest.TestCase):

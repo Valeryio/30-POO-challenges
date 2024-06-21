@@ -7,7 +7,7 @@
 import unittest
 import sys
 from io import StringIO
-from challenges.challenge_1 import Biscuit
+from challenges.biscuit import Biscuit
 
 
 class TestBiscuit(unittest.TestCase):

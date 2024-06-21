@@ -6,7 +6,7 @@
 import sys
 import unittest
 from io import StringIO
-from challenges.challenge_6 import Student
+from challenges.student import Student
 
 
 class TestStudent(unittest.TestCase):

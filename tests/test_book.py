@@ -7,7 +7,7 @@
 import unittest
 import sys
 from io import StringIO
-from challenges.challenge_2 import Book
+from challenges.book import Book
 
 
 class TestBook(unittest.TestCase):

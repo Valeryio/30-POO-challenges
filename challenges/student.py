@@ -10,7 +10,7 @@ class Student(Person):
         @level: (integer), the level of the scolarship of the
                 Child
     """
-    def __init__(self, name, age, gender, level)
+    def __init__(self, name, age, gender, level):
         """This is the constructor calling the parent's constructor"""
         super().__init__(name, age, gender)
         self.level = level

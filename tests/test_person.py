@@ -6,7 +6,7 @@
 import sys
 import unittest
 from io import StringIO
-from challenges.challenge_5 import Person
+from challenges.person import Person
 
 
 class TestPerson(unittest.TestCase):

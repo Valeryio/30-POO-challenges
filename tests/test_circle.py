@@ -7,7 +7,7 @@
 import sys
 import unittest
 from io import StringIO
-from challenges.challenge_4 import Circle
+from challenges.circle import Circle
 
 
 class TestCircle(unittest.TestCase):
