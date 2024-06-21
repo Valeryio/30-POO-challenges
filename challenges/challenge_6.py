@@ -10,13 +10,14 @@ class Student(Person):
         @level: (integer), the level of the scolarship of the
                 Child
     """
-    def __init__(self, name, age, gender, level):
+    def __init__(self, name, age, gender, level)
         """This is the constructor calling the parent's constructor"""
         super().__init__(name, age, gender)
         self.level = level
 
     def __repr__(self):
         """This method is the repr of the child"""
+        return f"({self.name}, {self.age}, {self.gender}, {self.level})"
 
 
     @property
@@ -30,10 +31,15 @@ class Student(Person):
         else:
             self.__level = level
 
-    def registered_student(self):
+    def registered_students(self, student_list):
         """This method prints a child"""
 
-        if students is None:
+        if student_list is None:
             pass
         else:
-
+            print('[', end='')
+            for i in range(len(student_list)):
+                print(student_list[i], end='')
+                if i + 1 != len(student_list):
+                    print(', ', end='')
+            print(']')

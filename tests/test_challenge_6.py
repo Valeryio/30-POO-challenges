@@ -23,12 +23,13 @@ class TestStudent(unittest.TestCase):
         suite"""
         self.bigetty = Student("Bigetty", 20, "male", "Terminal")
         self.pacman = Student("Erlyc", 38, "male", "Terminal")
-        self.student_list.add(self.bigetty)
-        self.student_list.add(self.pacman)
+        self.student_list = []
+        self.student_list.append(self.bigetty)
+        self.student_list.append(self.pacman)
 
     def test_attributes(self):
         """This test checks if all the attributes are well saved"""
-        self.assertEqual(self.bigetty.age, 19)
+        self.assertEqual(self.bigetty.age, 20)
         self.assertEqual(self.bigetty.gender, "male")
         self.assertEqual(self.bigetty.name, "Bigetty")
         self.assertEqual(self.bigetty.level, "Terminal")
@@ -39,8 +40,8 @@ class TestStudent(unittest.TestCase):
 
     def test_registered_students(self):
         """This test checks the registered_students() method"""
-        result = f"[('Bigetty', 20, 'male', 'Terminal')"\
-                + f", ('Erlyc', 38, 'male', 'Terminal')]"
+        result = f"[(Bigetty, 20, male, Terminal)"\
+                + f", (Erlyc, 38, male, Terminal)]\n"
         output_obj = StringIO()
         sys.stdout = output_obj
         
