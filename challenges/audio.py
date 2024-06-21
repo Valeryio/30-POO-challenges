@@ -43,4 +43,28 @@ class Audio():
         """
 
         if type(name) is not str:
-            raise TypeError("")
+            raise TypeError("The name should be a string")
+        else:
+            self.__name = name
+
+    @artist_name.setter
+    def artist_name(self, artist_name):
+        """This is the setter of the artist_name
+
+        Args:
+            @artist_name: (str)
+
+        Raises:
+            TypeError: if artist_name is not an str
+        """
+
+        if type(artist_name) is not str:
+            raise TypeError("The artist_name should be a string")
+        else:
+            self.__artist_name = artist_name
+
+    def listen(self):
+        print(f"{self.name} audio is playing, artist : {self.artist_name}")
+
+    def stop(self):
+        print(f"{self.name} have been stopped!")
