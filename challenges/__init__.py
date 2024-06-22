@@ -3,3 +3,4 @@
 from .person import Person
 from .audio import Audio
 from .video import Video
+from .vector_4d import Vector4D

@@ -20,17 +20,57 @@ class Vector4D():
         self.y = y
 
     def __eq__(self, other):
+        return self.__class__ == other.__class__
 
     def __add__(self, other):
-        """This is an overwriting of the add magic metho"""
+        """This is an overloading of the add magic method"""
         if type(other) is int:
             new_vector = Vector4D(self.u * other, self.v * other, \
                     self.x * other, self.y * other)
             return new_vector
-        else if type(other) is Vector4D:
-            new_vector = Vector4D(self.u * other.u, self.v * other.v), \
+        elif type(other) is Vector4D:
+            new_vector = Vector4D(self.u + other.u, self.v + other.v, \
+                    self.x + other.x, self.y + other.y)
+            return new_vector
+
+    def __sub__(self, other):
+        """This is an overloading of the sub magic method"""
+        if type(other) is int:
+            new_vector = Vector4D(self.u - other, self.v - other, \
+                    self.x - other, self.y - other)
+            return new_vector
+        elif type(other) is Vector4D:
+            new_vector = Vector4D(self.u - other.u, self.v - other.v, \
+                    self.x - other.x, self.y - other.y)
+            return new_vector
+
+    def __mul__(self, other):
+        """This is an overloading of the mul magic method"""
+        if type(other) is int:
+            new_vector = Vector4D(self.u * other, self.v * other, \
+                    self.x * other, self.y * other)
+            return new_vector
+        elif type(other) is Vector4D:
+            new_vector = Vector4D(self.u * other.u, self.v * other.v, \
                     self.x * other.x, self.y * other.y)
             return new_vector
+
+    def __truediv__(self, other):
+        """This is an overloading of the add magic method"""
+        if type(other) is int and other != 0:
+            new_vector = Vector4D(self.u / other, self.v / other, \
+                    self.x / other, self.y / other)
+            return new_vector
+        elif type(other) is Vector4D:
+            if 0 in other.__dict__.values():
+                raise ZeroDivisionError()
+            else:
+                new_vector = Vector4D(self.u / other.u, self.v / other.v, \
+                    self.x / other.x, self.y / other.y)
+                return new_vector
+
+    def __repr__(self):
+        return str(self.__dict__)
 
     @property
     def u(self):
@@ -50,16 +90,16 @@ class Vector4D():
 
     @u.setter
     def u(self, u):
-        if type(u) is not int:
+        if type(u) not in (int, float):
             raise TypeError("The value should be an integer")
         elif u is None:
             self.__u = 0
         else:
             self.__u = u
 
-    @u.setter
+    @v.setter
     def v(self, v):
-        if type(v) is not int:
+        if type(v) not in (int, float):
             raise TypeError("The value should be an integer")
         elif v is None:
             self.__v = 0
@@ -68,7 +108,7 @@ class Vector4D():
 
     @x.setter
     def x(self, x):
-        if type(x) is not int:
+        if type(x) not in (int, float):
             raise TypeError("The value should be an integer")
         elif x is None:
             self.__x = 0
@@ -77,7 +117,7 @@ class Vector4D():
 
     @y.setter
     def y(self, y):
-        if type(y) is not int:
+        if type(y) not in (int, float):
             raise TypeError("The value should be an integer")
         elif y is None:
             self.__y = 0

@@ -33,12 +33,11 @@ class TestVector4D(unittest.TestCase):
 
     def test_sub(self):
         """This test checks the __sub__() magic method of the Vector4D"""
-        
-        sub_vector = self.third_vec - self.first_vec
+        sub_vector = self.first_vec - Vector4D(1, 1, 1, 1)
         self.assertEqual(sub_vector.u, 1)
         self.assertEqual(sub_vector.v, 3)
-        self.assertEqual(sub_vector.x, 4)
-        self.assertEqual(sub_vector.y, 5)
+        self.assertEqual(sub_vector.x, 0)
+        self.assertEqual(sub_vector.y, 8)
 
     def test_mul(self):
         """This test checks the __mul__() magic method of the Vector4D"""
@@ -57,5 +56,8 @@ class TestVector4D(unittest.TestCase):
 
         self.assertEqual(truediv_vector.u, 0.5)
         self.assertEqual(truediv_vector.v, 1.5)
-        self.assertEqual(truediv_vector.x, 4)
-        self.assertEqual(truediv_vector.y, 5)
+        self.assertEqual(truediv_vector.x, 2)
+        self.assertEqual(truediv_vector.y, 2.5)
+
+        with self.assertRaises(ZeroDivisionError) as context:
+            result = self.second_vec / Vector4D(0, 0, 4, 5)
