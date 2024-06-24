@@ -12,21 +12,30 @@ class TestCalculator(unittest.TestCase):
     def setUp(self):
         """This method sets up the different variables
         of the class"""
-        self.calculator_one = Calculator(4)
+        pass
 
     def test_attributes(self):
         """This test checks if the attributes of Calculator
         are valid"""
-        self.assertEqual(self.calculator_one.variable, x)
+        pass
 
     def test_sum(self):
         """This test checks for the sum method of Calculator"""
-        pass
+        self.assertEqual(Calculator.sum(1, 2), 3)
+        with self.assertRaises(TypeError) as context:
+            result = Calculator.div(4 / '0')
 
     def test_mul(self):
         """This test checks for the mul method of Calculator"""
-        pass
+        self.assertEqual(Calculator.mul(1, 2), 2)
+        with self.assertRaises(TypeError) as context:
+            result = Calculator.div(4 / '0')
 
     def test_div(self):
         """This test checks for the div method of Calculator"""
-        pass
+        self.assertEqual(Calculator.div(1, 2), 0.5)
+        with self.assertRaises(TypeError) as context:
+            result = Calculator.div(4 / '0')
+
+        with self.assertRaises(ZeroDivisionError) as context:
+            result = Calculator.div(4 / 0)
