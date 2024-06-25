@@ -17,12 +17,12 @@ class TestArticle(unittest.TestCase):
         """This method sets up all the needed attributes for the
         tests"""
         self.banana = Article("Banana", 2.5)
-        self.Jacket = Article("Jacket", 1000)
+        self.jacket = Article("Jacket", 1000)
 
     def test_attributes(self):
         """This test checks if all the attributes have the right values"""
-        self.assertEqual(self.banana.name, "Banana")
-        self.assertEqual(self.banana.price, 1000)
+        self.assertEqual(self.jacket.name, "Jacket")
+        self.assertEqual(self.jacket.price, 1000)
 
-        with self.assertRaise(TypeError) as context
+        with self.assertRaises(TypeError) as context:
             test_variable = Article("Banana", 's')
